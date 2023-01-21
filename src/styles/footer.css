@@ -1,0 +1,18 @@
+.footer {
+  background-color: var(--main-3);
+  color: var(--accent-1);
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+.footer div {
+    margin: 20px;
+}
+.footer a {
+    font-size: smaller;
+    opacity: 50%;
+}
+.footer .credits {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,27 @@
+.certificate {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.certificate img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px; 
+}
+.certificate-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+.verify-certificate {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--main-3);
+    border-radius: 5px;
+    text-decoration: none;
+    min-width: 200px;
+    text-align: center;
+}
+.verify-certificate:hover {
+    background-color: transparent;
+}

@@ -1,0 +1,38 @@
+:root {
+  --rich-black-fogra-29: #11151cff;
+  --prussian-blue: #212d40ff;
+  --charcoal: #364156ff;
+  --blue-yonder: #141a23ff;
+  --dark-salmon: #e49a8b;
+  --copper-red: #d66853ff;
+
+  --main-1: var(--charcoal);
+  --main-2: var(--prussian-blue);
+  --main-3: var(--rich-black-fogra-29);
+  --main-4: var(--blue-yonder);
+  --accent-1: var(--copper-red);
+  --accent-2: var(--dark-salmon);
+}
+
+* {
+  margin: 0;
+  /*border: 1px solid red; for dev*/
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  background-color: var(--main-2);
+  color: white;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

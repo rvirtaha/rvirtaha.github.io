@@ -1,0 +1,27 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: var(--main-3);
+    margin: 5px 0px 5px 0px;
+}
+.flex-container:hover {
+    background-color: transparent;
+}
+.expand-open {
+    min-height: 10px;
+}
+.expand-closed {
+    display: none;
+}
+a {
+    color: var(--accent-2);
+}
+.github-repo {
+    display: flex;
+    color: var(--accent-2)
+}
+.blurb {
+    padding: 10px;
+    font-size: small;
+}
