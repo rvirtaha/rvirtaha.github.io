@@ -1,5 +1,6 @@
 import { ExpandingItem, Sikapeli, CVSivu, Sijaisuus, Yrittäjä, Fullstackopen, Ohjelmointi_1, PCEPPCAP } from "./expandingItem"
 import { Sertifikaatti } from "./sertifikaatti"
+import '../styles/content.css'
 
 function ContentElement (props) {
     return <div className="content-element">

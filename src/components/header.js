@@ -1,3 +1,5 @@
+import '../styles/header.css'
+
 export default function Header () {
     function hover(element) {
         element.setAttribute('src', 'pfp2.jpg');

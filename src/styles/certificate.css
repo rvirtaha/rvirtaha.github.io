@@ -1,7 +1,7 @@
 .certificate {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
 }
 .certificate img {
     width: 100px;
@@ -9,19 +9,29 @@
     margin-right: 20px; 
 }
 .certificate-info {
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
 }
 .verify-certificate {
-    margin: 10px;
+    box-sizing: border-box;
+
     padding: 10px;
     background-color: var(--main-3);
     border-radius: 5px;
+    width: 100%;
     text-decoration: none;
-    min-width: 200px;
     text-align: center;
 }
 .verify-certificate:hover {
     background-color: transparent;
+}
+
+@media (max-width: 400px) {
+    .certificate img {
+        width: 64px;
+        height: 64px;
+        margin-right: 10px;
+    }
 }

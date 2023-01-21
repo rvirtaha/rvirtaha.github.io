@@ -1,0 +1,35 @@
+.content-element {
+  margin: 20px;
+}
+.info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.content-element h1, h2 {
+  color: var(--accent-1);
+  margin: 10px;
+}
+.content-element h2 {
+  font-size: large;
+}
+.content-element p {
+  margin: 10px;
+}
+
+@media (max-width: 400px){
+    .content-element {
+      margin: 10px;
+    }
+    .content-element h1 {
+        font-size: larger;
+    }
+    .content-element h2 {
+        font-size: medium;
+    }
+}
+@media (min-width: 800px){
+    .content {
+      display: flex;
+    }
+}

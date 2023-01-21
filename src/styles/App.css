@@ -1,0 +1,6 @@
+.App {
+  --max-width: 1200px;
+  max-width: var(--max-width);
+  min-height: 100vh;
+  margin: auto;
+}
