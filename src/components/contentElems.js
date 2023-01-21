@@ -11,16 +11,43 @@ function ContentElement (props) {
 export function Koulutus () {
     return <ContentElement className="koulutus">
         <h1>Koulutus</h1>
-        <h2>Tuotantotalouden kandidaattiopinnot</h2>
-        <div className="info-container">
-            <p className="school">Aalto-yliopisto</p>
-            <p className="year">2022 -{'>'}</p>
-        </div>
-        <h2>Lukio / Ylioppilastutkinto</h2>
-        <div className="info-container">
-            <p className="school">Kuopion Klassillinen Lukio</p>
-            <p className="year">2018 - 2021</p>
-        </div>
+        <ExpandingItem
+            name="Tuotantotalouden kandidaattiopinnot"
+            peekInfo="2021 ->" peekName="Aalto-yliopisto">
+            <div className="info-container">
+                <p className="school">Keskiarvo</p>
+                <p className="year">5.0</p>
+            </div>
+            <div className="info-container">
+                <p className="school">Opintopisteet</p>
+                <p className="year">25</p>
+            </div>
+        </ExpandingItem>
+        <ExpandingItem
+            name="Lukio / Ylioppilastutkinto"
+            peekName="Kuopion Klassillinen Lukio"
+            peekInfo="2018-2020">
+            <div className="info-container">
+                <p className="school">Pitkä matematiikka</p>
+                <p className="year">Laudatur</p>
+            </div><div className="info-container">
+                <p className="school">Fysiikka</p>
+                <p className="year">Laudatur</p>
+            </div><div className="info-container">
+                <p className="school">Kemia</p>
+                <p className="year">Laudatur</p>
+            </div><div className="info-container"> 
+                <p className="school">Äidinkieli</p>
+                <p className="year">Laudatur</p>
+            </div><div className="info-container">
+                <p className="school">Pitkä englanti</p>
+                <p className="year">Laudatur</p>
+            </div><div className="info-container">
+                <p className="school">Biologia</p>
+                <p className="year">Laudatur</p>
+            </div>        
+        </ExpandingItem>
+
     </ContentElement>
 }
 

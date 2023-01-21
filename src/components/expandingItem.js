@@ -1,7 +1,7 @@
 import '../styles/expandingItem.css'
 import { useState } from 'react'
 
-export function ExpandingItem ({ name, shortDesc, github, children }) {
+export function ExpandingItem ({ name, shortDesc, github, children, peekName, peekInfo }) {
     const [ isOpen, setOpen ] = useState(false)
     function expand () {
         setOpen(true)
@@ -20,6 +20,10 @@ export function ExpandingItem ({ name, shortDesc, github, children }) {
             <h2>{name}</h2>
             <p>{shortDesc}</p>
         </div>
+        {peekInfo && peekName ? <div className='flex-container'>
+            <p>{peekName}</p>
+            <p>{peekInfo}</p>
+        </div> : <></>}
         <div className='expand-closed' id={`${name}-expand`}>
             {children}
             {github 
