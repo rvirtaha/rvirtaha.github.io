@@ -4,6 +4,7 @@
     color: var(--accent-1);
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
   }
   .header .container {
     margin: 0;
@@ -13,7 +14,7 @@
     gap: 10px;
   }
   .pfp {
-    margin: 10px 10px 10px 0px;
+    margin: 10px 0px 10px 0px;
     border-radius: 50%;
     float: right;
     max-height: 150px;
@@ -59,6 +60,16 @@
   }
   .icon:hover {
     opacity: 100%;
+  }
+
+  .kielivalinta p {
+    font-size: 40px;
+  }
+  .kielivalinta .link {
+    text-decoration: none;
+  }
+  .kielivalinta p:hover {
+    font-size: 48px;
   }
 
 

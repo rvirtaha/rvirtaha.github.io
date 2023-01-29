@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/header.css'
 
 export default function Header () {
@@ -44,5 +44,9 @@ export default function Header () {
                 onMouseOver={() => hover(document.getElementById("pfp"))}
                 onMouseOut={() => unhover(document.getElementById("pfp"))}
             />
+            <div className='kielivalinta'>
+                <Link className='link' to={'/fi'}><p>🇫🇮</p></Link>
+                <Link className='link' to={'/en'}><p>🇬🇧</p></Link>
+            </div>
         </div>
 }
