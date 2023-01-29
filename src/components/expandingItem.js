@@ -54,7 +54,7 @@ export function Sikapeli ({ language : l }) {
         </ExpandingItem>
         : <ExpandingItem 
         name="The Sika-Game" shortDesc="Firebase, Git, Leadership, Object-Oriented programming" github="https://github.com/rvirtaha/sikapeli22">
-            <p>The Pig-Game was a part of our freshmen partys marketing. I was responsible for
+            <p>The Sika-Game was a part of our freshmen partys marketing. I was responsible for
             developing the <a href="https://sikajuhlat22.fi">webpage</a> and the {' '}
             <a href="https://sikajuhlat22.fi/game">Game itself</a> with a small team.
             The game is written in JavaScript using Phaser.js. We used a serverless backend with
