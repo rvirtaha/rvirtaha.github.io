@@ -1,6 +1,9 @@
+import { useLocation } from 'react-router-dom';
 import '../styles/header.css'
 
 export default function Header () {
+    const l = useLocation().pathname === '/fi' ? 'fi' : 'en'
+
     function hover(element) {
         element.setAttribute('src', 'pfp2.jpg');
     }
@@ -13,7 +16,7 @@ export default function Header () {
             <div className="container">
                 <h1>Risto Virtaharju</h1>
                 <div className="sub-header">
-                    <p>Yhteystiedot</p>
+                    <p>{l === 'fi' ? 'Yhteystiedot' : 'Contact details'}</p>
                     <a href="https://www.linkedin.com/in/risto-virtaharju-5a01b524b/"><img className="icon" 
                         src="linkedin.png"
                         alt="linkedin icon"

@@ -1,6 +1,7 @@
-import { ExpandingItem, Sikapeli, CVSivu, Sijaisuus, Yrittäjä, Fullstackopen, Ohjelmointi_1, PCEPPCAP } from "./expandingItem"
+import { ExpandingItem, Sikapeli, CVSivu, Sijaisuus, Yrittäjä, Fullstackopen, Ohjelmointi_1, PCEPPCAP, Tietokannat } from "./expandingItem"
 import { Sertifikaatti } from "./sertifikaatti"
 import '../styles/content.css'
+
 
 function ContentElement (props) {
     return <div className="content-element">
@@ -8,42 +9,43 @@ function ContentElement (props) {
     </div>
 }
 
-export function Koulutus () {
+export function Koulutus ({language : l}) {
     return <ContentElement className="koulutus">
-        <h1>Koulutus</h1>
+        <h1>{l === 'fi' ? 'Koulutus' : 'Education'}</h1>
         <ExpandingItem
-            name="Tuotantotalouden kandidaattiopinnot"
-            peekInfo="2021 ->" peekName="Aalto-yliopisto">
+            name={l === 'fi' ? "Tuotantotalouden kandidaattiopinnot" : 'Industrial Engineering and Management'}
+            peekInfo="2021 ->" peekName={l === 'fi' ? "Aalto-yliopisto" : 'Aalto-Univeristy'}>
             <div className="info-container">
-                <p className="school">Keskiarvo</p>
+                <p className="school">{l === 'fi' ? 'Keskiarvo' : 'GPA'}</p>
                 <p className="year">5.0</p>
             </div>
             <div className="info-container">
-                <p className="school">Opintopisteet</p>
+                <p className="school">{l === 'fi' ? 'Opintopisteet' : 'Credits'}</p>
                 <p className="year">25</p>
             </div>
         </ExpandingItem>
         <ExpandingItem
-            name="Lukio / Ylioppilastutkinto"
+            name={l === 'fi' ? "Lukio / Ylioppilastutkinto" : 'High school'}
             peekName="Kuopion Klassillinen Lukio"
             peekInfo="2018-2020">
+            <h2>{l === 'fi' ? 'Ylioppilastutkinto' : 'Matriculation examination results'}</h2>
             <div className="info-container">
-                <p className="school">Pitkä matematiikka</p>
+                <p className="school">{l === 'fi' ? 'Pitkä matematiikka' : 'Mathematics (advanced syllabus)'}</p>
                 <p className="year">Laudatur</p>
             </div><div className="info-container">
-                <p className="school">Fysiikka</p>
+                <p className="school">{l === 'fi' ? 'Fysiikka' : 'Physics'}</p>
                 <p className="year">Laudatur</p>
             </div><div className="info-container">
-                <p className="school">Kemia</p>
+                <p className="school">{l === 'fi' ? 'Kemia' : 'Chemistry'}</p>
                 <p className="year">Laudatur</p>
             </div><div className="info-container"> 
-                <p className="school">Äidinkieli</p>
+                <p className="school">{l === 'fi' ? 'Äidinkieli' : 'Finnish'}</p>
                 <p className="year">Laudatur</p>
             </div><div className="info-container">
-                <p className="school">Pitkä englanti</p>
+                <p className="school">{l === 'fi' ? 'Pitkä englanti' : 'English'}</p>
                 <p className="year">Laudatur</p>
             </div><div className="info-container">
-                <p className="school">Biologia</p>
+                <p className="school">{l === 'fi' ? 'Biologia' : 'Biology'}</p>
                 <p className="year">Laudatur</p>
             </div>        
         </ExpandingItem>
@@ -51,8 +53,8 @@ export function Koulutus () {
     </ContentElement>
 }
 
-export function Profiili () {
-    return <ContentElement className="profiili">
+export function Profiili ({language : l}) {
+    return l === 'fi' ? <ContentElement className="profiili">
         <h1>Profiili</h1>
         <p>
             Olen kaikesta teknologiasta ja softasta kiinnostunut Tuotantotalouden opiskelija, jolla riittää
@@ -60,36 +62,52 @@ export function Profiili () {
             Olen myös itseoppinut web-sovelluskehityksen lisäksi myös yhtä ja toista sovelluskehityksen infrapuolelta.
         </p>
         <p>
-            Minulla on myös hyvät yhteistyötaidot, sillä olen ohjelmoinut osana tiimiä. 
-            Olen nykyään osa ainejärjestömme webbitiimiä ja olin viime syksynä vastuussa pelin kehittämisestä.
+            Minulla on myös hyvät yhteistyötaidot, sillä olen osallistunut aktiivisesti yhteistyöprojekteihin, kuten 
+            ainejärjestömme webbitiimiin, Slushiin ja pelinkehitykseen fuksijuhliamme varten, josta olin viime syksynä vastuussa.
         </p>
         <p>
             Tavoitteenani on saada kokemusta henkilökohtaisia projekteja suurempien sovellusten kehityksestä ja
             kosketusta ammattimaisen sovelluskehityksen maailmaan.
         </p>
     </ContentElement>
+    : <ContentElement className="profiili">
+        <h1>Profile</h1>
+        <p>
+            I am an Industrial Engineering and Management student whose interested in all things tech. I can work 
+            independently and take initiative, for example I was an entrepreneur for two summers.
+        </p>
+        <p>
+            I also have good teamwork skills. I have actively participated in group projects such as developing
+            a game for our freshmen party and Slush. I am also part of our studen guilds web-team.
+        </p>
+        <p>
+            My goal is to get more concrete experience and professional experience working in larger projects
+            and in bigger teams. 
+        </p>
+</ContentElement>
 }
 
-export function Portfolio () {
+export function Portfolio ({language : l}) {
     return <ContentElement className="portfolio">
         <h1>Portfolio</h1>
-        <Sikapeli />
-        <CVSivu />
+        <Sikapeli language={l} />
+        <CVSivu language={l} />
     </ContentElement>
 }
 
-export function Teknologiat () {
+export function Teknologiat ({language : l}) {
     return <ContentElement className="teknologiat">
-        <h1>Teknologiaosaaminen</h1>
-        <h2>Kielet</h2>
+        <h1>{l === 'fi' ? 'Teknologiaosaaminen' : 'Technologies'}</h1>
+        <h2>{l === 'fi' ? 'Kielet' : 'Languages'}</h2>
         <p>JavaScript, Scala, Python, TypeScript</p>
         
-        <h1>Kurssit</h1>
-        <Fullstackopen />
-        <Ohjelmointi_1 />
-        <PCEPPCAP />
+        <h1>{l === 'fi' ? 'Kurssit' : 'Courses'}</h1>
+        <Fullstackopen language={l} />
+        <Ohjelmointi_1 language={l} />
+        <PCEPPCAP language={l} />
+        <Tietokannat language={l} />
 
-        <h1>Sertifioinnit</h1>
+        <h1>{l === 'fi' ? 'Sertifioinnit' : 'Certifications'}</h1>
         <Sertifikaatti img="AZ-900.png" name="Azure Fundamentals"
             verify="https://www.credly.com/badges/cf346ebf-5e2c-49ee-8a52-4caf8d0cd3ea/public_url">
             <p>Microsoft Certiefied: Azure Fundamentals</p>
@@ -106,8 +124,8 @@ export function Teknologiat () {
     </ContentElement>
 }
 
-export function Harrastukset () {
-    return <ContentElement className="harrastukset">
+export function Harrastukset ({language : l}) {
+    return l === 'fi' ? <ContentElement className="harrastukset">
         <h1>Harrastukset</h1>
         <p>
             Harrastan kuntosalin lisäksi vaeltamista. Olenkin käynyt useilla vaelluksilla vuodessa
@@ -119,27 +137,38 @@ export function Harrastukset () {
             Rust-kielestä, mutten ole vielä kokeillut käyttää sitä.
         </p>
     </ContentElement>
-}
-
-export function Työkokemus () {
-    return <ContentElement className="työkokemus">
-        <h1>Työkokemus</h1>
-        <Sijaisuus />
-        
-        <Yrittäjä />
+    : <ContentElement className="harrastukset">
+        <h1>Hobbies</h1>
+        <p>
+            My hobbies are lifting weights and hiking / trekking. I have been on several hikes 
+            over the last few years, mostly in the Finnish Lapland.
+        </p>
+        <p>
+            I also enjoy skiing, cooking and reading. Also my interest in tech could be considered
+            a hobby as well, since I like to tinker around with little projects. At the moment I am 
+            interested in trying Rust.
+        </p>
     </ContentElement>
 }
 
-export function Kielitaito () {
+export function Työkokemus ({language : l}) {
+    return <ContentElement className="työkokemus">
+        <h1>{l === 'fi' ? 'Työkokemus' : 'Employment'}</h1>
+        <Sijaisuus language={l} />
+        <Yrittäjä language={l} />
+    </ContentElement>
+}
+
+export function Kielitaito ({language : l}) {
     return <ContentElement className="kielitaito">
-        <h1>Kielitaito</h1>
+        <h1>{l === 'fi' ? 'Kielitaito' : 'Language skills' }</h1>
         <div className="info-container">
-            <p className="language">suomi</p>
-            <p className="ability">äidinkieli</p>
+            <p className="language">{l === 'fi' ? 'suomi' : 'Finnish' }</p>
+            <p className="ability">{l === 'fi' ? 'äidinkieli' : 'Native' }</p>
         </div>
         <div className="info-container">
-            <p className="language">englanti</p>
-            <p className="ability">erinomainen</p>
+            <p className="language">{l === 'fi' ? 'englanti' : 'English' }</p>
+            <p className="ability">{l === 'fi' ? 'erinomainen' : 'Excellent' }</p>
         </div>
     </ContentElement>
 }
