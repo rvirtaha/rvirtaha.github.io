@@ -58,12 +58,13 @@ export function Profiili ({language : l}) {
         <h1>Profiili</h1>
         <p>
             Olen kaikesta teknologiasta ja softasta kiinnostunut Tuotantotalouden opiskelija, jolla riittää
-            harrastuneistuuta ja itseohjautuvuutta, esimerkiksi yrittäjänä toimiminen vaati paljon oma-aloitteisuutta.
-            Olen myös itseoppinut web-sovelluskehityksen lisäksi myös yhtä ja toista sovelluskehityksen infrapuolelta.
+            harrastuneistuuta ja itseohjautuvuutta. Esimerkiksi yrittäjänä toimiminen vaati paljon oma-aloitteisuutta.
+            Web-sovelluskehityksen lisäksi olen myös itseoppinut yhtä sun toista.
         </p>
         <p>
-            Minulla on myös hyvät yhteistyötaidot, sillä olen osallistunut aktiivisesti yhteistyöprojekteihin, kuten 
-            ainejärjestömme webbitiimiin, Slushiin ja pelinkehitykseen fuksijuhliamme varten, josta olin viime syksynä vastuussa.
+            Minulla on myös hyvät yhteistyötaidot. Olen esimerkiksi osallistunut aktiivisesti yhteistyöprojekteihin, kuten 
+            ainejärjestömme webbitiimiin, Slushiin ja pelinkehitykseen fuksijuhliamme varten, josta olin viime syksynä vastuussa. 
+            Tuotantotalouden opinnot myös sisältävät paljon ryhmä- ja projektitöitä.
         </p>
         <p>
             Tavoitteenani on saada kokemusta henkilökohtaisia projekteja suurempien sovellusten kehityksestä ja
@@ -78,7 +79,7 @@ export function Profiili ({language : l}) {
         </p>
         <p>
             I also have good teamwork skills. I have actively participated in group projects such as developing
-            a game for our freshmen party and Slush. I am also part of our studen guilds web-team.
+            a game for our freshmen party and Slush. I am also part of our student guilds web-team.
         </p>
         <p>
             My goal is to get more concrete experience and professional experience working in larger projects
