@@ -58,12 +58,12 @@ export function Profiili ({language : l}) {
         <h1>Profiili</h1>
         <p>
             Olen kaikesta teknologiasta ja softasta kiinnostunut Tuotantotalouden opiskelija, jolla riittää
-            harrastuneistuuta ja itseohjautuvuutta. Esimerkiksi yrittäjänä toimiminen vaati paljon oma-aloitteisuutta.
-            Web-sovelluskehityksen lisäksi olen myös itseoppinut yhtä sun toista.
+            harrastuneistuutta ja itseohjautuvuutta. Esimerkiksi yrittäjänä toimiminen vaati paljon oma-aloitteisuutta.
         </p>
         <p>
             Minulla on myös hyvät yhteistyötaidot. Olen esimerkiksi osallistunut aktiivisesti yhteistyöprojekteihin, kuten 
-            ainejärjestömme webbitiimiin, Slushiin ja pelinkehitykseen fuksijuhliamme varten, josta olin viime syksynä vastuussa. 
+            ainejärjestömme webbitiimiin, Slushiin ja pelinkehitykseen fuksijuhliamme varten, josta olin viime syksynä vastuussa.
+            Webbitiimissä tällä hetkellä rakennan Cypress-integraatiota CI/CD-putkeen.
             Tuotantotalouden opinnot myös sisältävät paljon ryhmä- ja projektitöitä.
         </p>
         <p>
@@ -79,7 +79,9 @@ export function Profiili ({language : l}) {
         </p>
         <p>
             I also have good teamwork skills. I have actively participated in group projects such as developing
-            a game for our freshmen party and Slush. I am also part of our student guilds web-team.
+            a game for our freshmen party and Slush. I am also part of our student guilds web-team. At the moment I am
+            integrating Cypress devcontainers to our CI/CD pipeline.
+            IEM studies also include alot of groupwork and projects.
         </p>
         <p>
             My goal is to get more concrete experience and professional experience working in larger projects
